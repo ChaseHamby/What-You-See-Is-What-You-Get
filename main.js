@@ -34,16 +34,26 @@ const famousPeople = [
     }
 ]
 
+let counter = 0;
+
 const cardBuilder = () => {
     let newString = '';
     for (let i = 0; i < famousPeople.length; i++) {
-        newString +=    `<h3 id='title' class='title'>${famousPeople[i].title}</h3>`;
-        newString +=    `<h4 id='name' class='name'>${famousPeople[i].name}</h4>`;
-        newString +=    `<p id='bio' class='bio'>${famousPeople[i].bio}</p>`;
-        newString +=    `<image id='image' href=${famousPeople[i].image}>`;
-        newString +=    `<p id='birth' class='birth'>${famousPeople[i].lifespan.birth}</p>`;
-        newString +=    `<p id='death' class='death'>${famousPeople[i].lifespan.death}</h1>`;
+        let counterString = '' +counter;
+        newString +=    `<h3 id='title${i}' class='title'>${famousPeople[i].title}</h3>`;
+        newString +=    `<h4 id='name${i}' class='name'>${famousPeople[i].name}</h4>`;
+        newString +=    `<p id='bio${i}' class='bio'>${famousPeople[i].bio}</p>`;
+        newString +=    `<image id='image${i}' href=${famousPeople[i].image}>`;
+        newString +=    `<p id='birth${i}' class='birth'>${famousPeople[i].lifespan.birth}</p>`;
+        newString +=    `<p id='death${i}' class='death'>${famousPeople[i].lifespan.death}</h1>`;
     }
     printToDom(newString, 'cardDisplay');
 };
 cardBuilder();
+
+const numberAssigner = () => {
+    // for (let i = 0; i < cardBuilder.length; i++) {
+    document.getElementById('')
+        
+    }
+}
