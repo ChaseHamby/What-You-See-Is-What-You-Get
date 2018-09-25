@@ -1,3 +1,16 @@
 body { 
-    background-color: yellow;
+    background-color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    flex-direction: wrap;
+}
+
+.container:nth-child(odd) {
+    background: red;
+}
+
+/* .container:nth-child(even) {
+    background: blue; */
 }
