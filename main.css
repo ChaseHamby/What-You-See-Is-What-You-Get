@@ -4,6 +4,38 @@ body {
 
 .container {
     display: flex;
+    justify-content: space-evenly;
+}
+
+#person0 {
+    border: black solid 1px;
+    padding: 10px;
+}
+
+#person1 {
+    border: black solid 1px;
+    padding: 10px;
+}
+
+#person2 {
+    border: black solid 1px;
+    padding: 10px;
+}
+
+#person3 {
+    border: black solid 1px;
+    padding: 10px;
+}
+
+.odd {
+    background-color: lightblue;
+}
+
+.even {
+    background-color: lightyellow;
+}
+/* .container {
+    display: flex;
     flex-direction: wrap;
 }
 
@@ -13,4 +45,4 @@ body {
 
 /* .container:nth-child(even) {
     background: blue; */
-}
+} */

@@ -36,24 +36,27 @@ const famousPeople = [
 
 let counter = 0;
 
+// DONT FORGET THE CARD DISPLAY DIV IF YOU RUN INTO ISSUES //
 const cardBuilder = () => {
     let newString = '';
     for (let i = 0; i < famousPeople.length; i++) {
-        let counterString = '' +counter;
+        newString += `<div id='person${i}' class='personAll'>`;
         newString +=    `<h3 id='title${i}' class='title'>${famousPeople[i].title}</h3>`;
         newString +=    `<h4 id='name${i}' class='name'>${famousPeople[i].name}</h4>`;
         newString +=    `<p id='bio${i}' class='bio'>${famousPeople[i].bio}</p>`;
         newString +=    `<image id='image${i}' href=${famousPeople[i].image}>`;
         newString +=    `<p id='birth${i}' class='birth'>${famousPeople[i].lifespan.birth}</p>`;
         newString +=    `<p id='death${i}' class='death'>${famousPeople[i].lifespan.death}</h1>`;
-    }
-    printToDom(newString, 'cardDisplay');
+        newString += `</div>`
+    };
+    printToDom(newString, 'container');
+    for (let i = 0; i < famousPeople.length; i++) {
+        let color = `person${i}`;
+        if (i % 2 === 1) {
+            document.getElementById(color).style.background = "lightblue";
+        } else {
+            document.getElementById(color).style.background = "lightyellow";
+        };
+    };
 };
 cardBuilder();
-
-const numberAssigner = () => {
-    // for (let i = 0; i < cardBuilder.length; i++) {
-    document.getElementById('')
-        
-    }
-}
