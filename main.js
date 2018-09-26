@@ -36,7 +36,6 @@ const famousPeople = [
 
 let counter = 0;
 
-// DONT FORGET THE CARD DISPLAY DIV IF YOU RUN INTO ISSUES //
 const cardBuilder = () => {
     let newString = '';
     for (let i = 0; i < famousPeople.length; i++) {
@@ -44,14 +43,13 @@ const cardBuilder = () => {
         newString +=    `<h3 id='title${i}' class='title'>${famousPeople[i].title}</h3>`;
         newString +=    `<h4 id='name${i}' class='name'>${famousPeople[i].name}</h4>`;
         newString +=    `<p id='bio${i}' class='bio'>${famousPeople[i].bio}</p>`;
-        newString +=    `<image id='image${i}' href=${famousPeople[i].image}>`;
         newString +=    `<p id='birth${i}' class='birth'>${famousPeople[i].lifespan.birth}</p>`;
-        newString +=    `<p id='death${i}' class='death'>${famousPeople[i].lifespan.death}</h1>`;
+        newString +=    `<p id='death${i}' class='death'>${famousPeople[i].lifespan.death}</p>`;
+        newString +=    `<img src="${famousPeople[i].image}">`
         newString += `</div>`
     };
     printToDom(newString, 'container');
-
-    // Color Coding Functionality //
+// Color Coding Functionality //
     for (let i = 0; i < famousPeople.length; i++) {
         let color = `person${i}`;
         if (i % 2 === 1) {
@@ -72,6 +70,23 @@ for (let i = 0; i < famousPeople.length; i++) {
     });
 };
 
+// Focus Function //
+
 function getFocus() {
     document.getElementById("inputText").focus();
-}
+};
+
+// KeyUp Function // 
+let outputEl;
+
+function bioChange(bio) {
+    outputEl -= document.getElementById(bio)
+let fieldEl = document.getElementById("inputText");
+fieldEl.addEventListener("keyup", function (event) {
+    outputEl.innerHTML = event.target.value
+    })
+};
+document.getElementById("bio0").addEventListener("click", function (){bioChange("bio0")});
+document.getElementById("bio1").addEventListener("click", function (){bioChange("bio1")});
+document.getElementById("bio2").addEventListener("click", function (){bioChange("bio2")});
+document.getElementById("bio3").addEventListener("click", function (){bioChange("bio3")});
