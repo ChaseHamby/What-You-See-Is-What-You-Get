@@ -60,3 +60,12 @@ const cardBuilder = () => {
     };
 };
 cardBuilder();
+
+// Dotted Border Functionality //
+
+for (let i = 0; i < famousPeople.length; i++) {
+    let bob = `person${i}`;
+    document.getElementById(bob).addEventListener("click", function() {
+        document.getElementById(bob).style.border = "dotted";
+    });
+};
