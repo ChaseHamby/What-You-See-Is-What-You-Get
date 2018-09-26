@@ -36,7 +36,6 @@ const famousPeople = [
 
 let counter = 0;
 
-// DONT FORGET THE CARD DISPLAY DIV IF YOU RUN INTO ISSUES //
 const cardBuilder = () => {
     let newString = '';
     for (let i = 0; i < famousPeople.length; i++) {
@@ -44,14 +43,13 @@ const cardBuilder = () => {
         newString +=    `<h3 id='title${i}' class='title'>${famousPeople[i].title}</h3>`;
         newString +=    `<h4 id='name${i}' class='name'>${famousPeople[i].name}</h4>`;
         newString +=    `<p id='bio${i}' class='bio'>${famousPeople[i].bio}</p>`;
-        newString +=    `<image id='image${i}' href=${famousPeople[i].image}>`;
         newString +=    `<p id='birth${i}' class='birth'>${famousPeople[i].lifespan.birth}</p>`;
-        newString +=    `<p id='death${i}' class='death'>${famousPeople[i].lifespan.death}</h1>`;
+        newString +=    `<p id='death${i}' class='death'>${famousPeople[i].lifespan.death}</p>`;
+        newString +=    `<img src="${famousPeople[i].image}">`
         newString += `</div>`
     };
     printToDom(newString, 'container');
-
-    // Color Coding Functionality //
+// Color Coding Functionality //
     for (let i = 0; i < famousPeople.length; i++) {
         let color = `person${i}`;
         if (i % 2 === 1) {
@@ -72,6 +70,18 @@ for (let i = 0; i < famousPeople.length; i++) {
     });
 };
 
+// Focus Function //
+
 function getFocus() {
     document.getElementById("inputText").focus();
-}
+};
+
+// KeyUp Function // 
+
+var outputEl = document.getElementById();
+
+var fieldEl = document.getElementById("inputText");
+
+fieldEl.addEventListener("keyup", function (event) {
+    outputEl.innerHTML = event.target.value
+});
