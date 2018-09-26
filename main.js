@@ -34,8 +34,6 @@ const famousPeople = [
     }
 ]
 
-let counter = 0;
-
 const cardBuilder = () => {
     let newString = '';
     for (let i = 0; i < famousPeople.length; i++) {
@@ -56,8 +54,8 @@ const cardBuilder = () => {
             document.getElementById(color).style.background = "lightblue";
         } else {
             document.getElementById(color).style.background = "lightyellow";
-        };
-    };
+        }
+    }
 };
 cardBuilder();
 
@@ -68,7 +66,7 @@ for (let i = 0; i < famousPeople.length; i++) {
     document.getElementById(bob).addEventListener("click", function() {
         document.getElementById(bob).style.border = "dotted";
     });
-};
+}
 
 // Focus Function //
 
@@ -77,16 +75,17 @@ function getFocus() {
 };
 
 // KeyUp Function // 
-let outputEl;
-
 function bioChange(bio) {
-    outputEl -= document.getElementById(bio)
-let fieldEl = document.getElementById("inputText");
-fieldEl.addEventListener("keyup", function (event) {
-    outputEl.innerHTML = event.target.value
-    })
-};
+    document.getElementById('inputText').value = '';
+    outputEl = document.getElementById(bio)
+    let fieldEl = document.getElementById("inputText");
+    fieldEl.addEventListener("keyup", function (event) {
+        outputEl.innerHTML = event.target.value;
+    });
+}
+
 document.getElementById("bio0").addEventListener("click", function (){bioChange("bio0")});
 document.getElementById("bio1").addEventListener("click", function (){bioChange("bio1")});
 document.getElementById("bio2").addEventListener("click", function (){bioChange("bio2")});
 document.getElementById("bio3").addEventListener("click", function (){bioChange("bio3")});
+
