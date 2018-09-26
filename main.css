@@ -4,6 +4,7 @@ body {
 
 .container {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
 }
 
@@ -26,23 +27,3 @@ body {
     border: black solid 1px;
     padding: 10px;
 }
-
-.odd {
-    background-color: lightblue;
-}
-
-.even {
-    background-color: lightyellow;
-}
-/* .container {
-    display: flex;
-    flex-direction: wrap;
-}
-
-.container:nth-child(odd) {
-    background: red;
-}
-
-/* .container:nth-child(even) {
-    background: blue; */
-} */
