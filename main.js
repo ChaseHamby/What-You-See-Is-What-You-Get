@@ -50,6 +50,8 @@ const cardBuilder = () => {
         newString += `</div>`
     };
     printToDom(newString, 'container');
+
+    // Color Coding Functionality //
     for (let i = 0; i < famousPeople.length; i++) {
         let color = `person${i}`;
         if (i % 2 === 1) {
@@ -69,3 +71,7 @@ for (let i = 0; i < famousPeople.length; i++) {
         document.getElementById(bob).style.border = "dotted";
     });
 };
+
+function getFocus() {
+    document.getElementById("inputText").focus();
+}
