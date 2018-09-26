@@ -77,11 +77,16 @@ function getFocus() {
 };
 
 // KeyUp Function // 
+let outputEl;
 
-var outputEl = document.getElementById();
-
-var fieldEl = document.getElementById("inputText");
-
+function bioChange(bio) {
+    outputEl -= document.getElementById(bio)
+let fieldEl = document.getElementById("inputText");
 fieldEl.addEventListener("keyup", function (event) {
     outputEl.innerHTML = event.target.value
-});
+    })
+};
+document.getElementById("bio0").addEventListener("click", function (){bioChange("bio0")});
+document.getElementById("bio1").addEventListener("click", function (){bioChange("bio1")});
+document.getElementById("bio2").addEventListener("click", function (){bioChange("bio2")});
+document.getElementById("bio3").addEventListener("click", function (){bioChange("bio3")});
