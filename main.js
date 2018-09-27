@@ -74,7 +74,7 @@ function getFocus() {
     document.getElementById("inputText").focus();
 };
 
-// KeyUp Function // 
+// KeyUp and Re-write Bio Function // 
 function bioChange(bio) {
     document.getElementById('inputText').value = '';
     outputEl = document.getElementById(bio)
@@ -88,4 +88,3 @@ document.getElementById("bio0").addEventListener("click", function (){bioChange(
 document.getElementById("bio1").addEventListener("click", function (){bioChange("bio1")});
 document.getElementById("bio2").addEventListener("click", function (){bioChange("bio2")});
 document.getElementById("bio3").addEventListener("click", function (){bioChange("bio3")});
-

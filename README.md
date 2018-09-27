@@ -31,3 +31,7 @@ hs -p 9999
 ```
 localhost: 9999
 ```
+# Issues
+## Had some trouble with `outputEl = document.getElementById(bio)`
+## Originally had `let outputEl = document.getElementById(bio)` but once I removed `let`, the function worked properly
+## `Let` was causing the function to store the previous variable set
