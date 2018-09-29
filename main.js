@@ -88,3 +88,11 @@ document.getElementById("bio0").addEventListener("click", function (){bioChange(
 document.getElementById("bio1").addEventListener("click", function (){bioChange("bio1")});
 document.getElementById("bio2").addEventListener("click", function (){bioChange("bio2")});
 document.getElementById("bio3").addEventListener("click", function (){bioChange("bio3")});
+
+// Enter Functionality //
+
+document.getElementById('inputText').addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+        event.target.value = '';
+    }
+});
